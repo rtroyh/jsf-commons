@@ -16,69 +16,70 @@ import org.apache.log4j.Logger;
 
 public class ViewExpiredExceptionExceptionHandler extends ExceptionHandlerWrapper {
 
-	private ExceptionHandler wrapped;
+    private ExceptionHandler wrapped;
 
-	public ViewExpiredExceptionExceptionHandler(ExceptionHandler wrapped) {
-		this.wrapped = wrapped;
-	}
+    public ViewExpiredExceptionExceptionHandler(ExceptionHandler wrapped) {
+        this.wrapped = wrapped;
+    }
 
-	@Override
-	public ExceptionHandler getWrapped() {
-		return this.wrapped;
-	}
+    @Override
+    public ExceptionHandler getWrapped() {
+        return this.wrapped;
+    }
 
-	@Override
-	public void handle() throws FacesException {
-		for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents().iterator(); i.hasNext();) {
-			ExceptionQueuedEvent event = i.next();
-			ExceptionQueuedEventContext context = (ExceptionQueuedEventContext) event.getSource();
-			Throwable t = context.getException();
+    @Override
+    public void handle() throws
+                         FacesException {
+        for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents().iterator(); i.hasNext(); ) {
+            ExceptionQueuedEvent event = i.next();
+            ExceptionQueuedEventContext context = (ExceptionQueuedEventContext) event.getSource();
+            Throwable t = context.getException();
 
-			FacesContext fc = FacesContext.getCurrentInstance();
-			Map<String, Object> requestMap = fc.getExternalContext().getRequestMap();
-			NavigationHandler nav = fc.getApplication().getNavigationHandler();
+            FacesContext fc = FacesContext.getCurrentInstance();
+            Map<String, Object> requestMap = fc.getExternalContext().getRequestMap();
+            NavigationHandler nav = fc.getApplication().getNavigationHandler();
 
-			if (t instanceof ViewExpiredException) {
-				this.thisMethodIsOnlyNecessaryBecauseOfTheWayWeForceTheViewExpiredException(fc);
-				try {
-					ViewExpiredException vee = (ViewExpiredException) t;
+            if (t instanceof ViewExpiredException) {
+                this.thisMethodIsOnlyNecessaryBecauseOfTheWayWeForceTheViewExpiredException(fc);
+                try {
+                    ViewExpiredException vee = (ViewExpiredException) t;
 
-					requestMap.put(	"currentViewId",
-									vee.getViewId());
+                    requestMap.put("currentViewId",
+                                   vee.getViewId());
 
-					nav.handleNavigation(	fc,
-											null,
-											"viewExpired");
-					fc.renderResponse();
+                    nav.handleNavigation(fc,
+                                         null,
+                                         "viewExpired");
+                    fc.renderResponse();
 
-				} finally {
-					i.remove();
-				}
-			} else {
-				try {
-					Logger.getLogger(ViewExpiredExceptionExceptionHandler.class).info("exception:" +
-																						t.getMessage());
+                } finally {
+                    i.remove();
+                }
+            } else {
+                try {
+                    Logger.getLogger(ViewExpiredExceptionExceptionHandler.class).info("exception:" +
+                                                                                              t.getMessage());
 
-					nav.handleNavigation(	fc,
-											null,
-											"exception");
-					fc.renderResponse();
+                    nav.handleNavigation(fc,
+                                         null,
+                                         "exception");
+                    fc.renderResponse();
 
-				} finally {
-					i.remove();
-				}
-			}
-		}
-		// At this point, the queue will not contain any ViewExpiredEvents.
-		// Therefore, let the parent handle them.
-		getWrapped().handle();
+                } finally {
+                    i.remove();
+                }
+            }
+        }
+        // At this point, the queue will not contain any ViewExpiredEvents.
+        // Therefore, let the parent handle them.
+        getWrapped().handle();
 
-	}
+    }
 
-	private void thisMethodIsOnlyNecessaryBecauseOfTheWayWeForceTheViewExpiredException(FacesContext context) {
-		UIViewRoot root = context.getApplication().getViewHandler().createView(	context,
-																				"/validacion.xhtml");
-		context.setViewRoot(root);
-	}
+    private void thisMethodIsOnlyNecessaryBecauseOfTheWayWeForceTheViewExpiredException(FacesContext context) {
+        UIViewRoot root = context.getApplication().getViewHandler().createView(context,
+                                                                               "/validacion.xhtml");
+        context.setViewRoot(root);
+    }
 
 }

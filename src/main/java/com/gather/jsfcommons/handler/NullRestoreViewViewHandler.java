@@ -47,21 +47,21 @@ import javax.faces.context.FacesContext;
 
 public class NullRestoreViewViewHandler extends ViewHandlerWrapper {
 
-	private ViewHandler wrapped;
+    private ViewHandler wrapped;
 
-	public NullRestoreViewViewHandler(ViewHandler wrapped) {
-		this.wrapped = wrapped;
-	}
+    public NullRestoreViewViewHandler(ViewHandler wrapped) {
+        this.wrapped = wrapped;
+    }
 
-	@Override
-	public UIViewRoot restoreView(	FacesContext context,
-									String viewId) {
-		return null;
-	}
+    @Override
+    public UIViewRoot restoreView(FacesContext context,
+                                  String viewId) {
+        return null;
+    }
 
-	@Override
-	public ViewHandler getWrapped() {
-		return wrapped;
-	}
+    @Override
+    public ViewHandler getWrapped() {
+        return wrapped;
+    }
 
 }

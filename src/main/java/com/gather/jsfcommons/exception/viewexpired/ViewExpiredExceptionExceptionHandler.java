@@ -11,6 +11,7 @@ import javax.faces.context.ExceptionHandlerWrapper;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ExceptionQueuedEvent;
 import javax.faces.event.ExceptionQueuedEventContext;
+
 import org.apache.log4j.Logger;
 
 public class ViewExpiredExceptionExceptionHandler extends ExceptionHandlerWrapper {
@@ -27,8 +28,9 @@ public class ViewExpiredExceptionExceptionHandler extends ExceptionHandlerWrappe
     }
 
     @Override
-    public void handle() throws FacesException {
-        for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents().iterator(); i.hasNext();) {
+    public void handle() throws
+                         FacesException {
+        for (Iterator<ExceptionQueuedEvent> i = getUnhandledExceptionQueuedEvents().iterator(); i.hasNext(); ) {
             ExceptionQueuedEvent event = i.next();
             ExceptionQueuedEventContext context = (ExceptionQueuedEventContext) event.getSource();
             Throwable t = context.getException();
@@ -56,7 +58,7 @@ public class ViewExpiredExceptionExceptionHandler extends ExceptionHandlerWrappe
             } else {
                 try {
                     Logger.getLogger(ViewExpiredExceptionExceptionHandler.class).info("exception:"
-                            + t.getMessage());
+                                                                                              + t.getMessage());
 
                     nav.handleNavigation(fc,
                                          null,
