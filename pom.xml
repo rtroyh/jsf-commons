@@ -6,13 +6,12 @@
 
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>1.0</version>
+    <version>2.1.12</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://maven.apache.org</url>
 
     <properties>
-        <mojarra.version>2.1.9</mojarra.version>
         <maven.compiler.version>2.5.1</maven.compiler.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -21,13 +20,13 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>gathercommons</artifactId>
-            <version>${project.version}</version>
+            <version>1.0</version>
         </dependency>
         <dependency>
             <artifactId>jsf-api</artifactId>
             <groupId>com.sun.faces</groupId>
             <type>jar</type>
-            <version>${mojarra.version}</version>
+            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>log4j</groupId>
