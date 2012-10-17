@@ -15,7 +15,8 @@ public final class JSFUtil {
     public static String getParameterValue(FacesContext fc,
                                            String parameterName) {
         Map<String, String> params = fc.getExternalContext().getRequestParameterMap();
-        return params.get("evaluacion");
+
+        return params.get(parameterName);
     }
 
 }
