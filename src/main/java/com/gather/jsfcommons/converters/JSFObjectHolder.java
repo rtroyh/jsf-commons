@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.util.converters;
+package com.gather.jsfcommons.converters;
 
 import java.io.Serializable;
 

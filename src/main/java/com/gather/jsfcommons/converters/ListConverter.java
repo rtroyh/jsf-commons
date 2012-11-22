@@ -1,25 +1,24 @@
-package com.gather.jsfcommons.util.converters;
+package com.gather.jsfcommons.converters;
 
-import java.util.List;
+import com.gather.gathercommons.util.Validator;
+import org.apache.log4j.Logger;
 
 import javax.faces.component.UIComponent;
 import javax.faces.component.UISelectItems;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.model.SelectItem;
-
-import org.apache.log4j.Logger;
-
-import com.gather.gathercommons.util.Validator;
+import java.util.List;
 
 public class ListConverter implements Converter {
+    private static final Logger LOG = Logger.getLogger(ListConverter.class);
 
     @SuppressWarnings("unchecked")
     @Override
     public Object getAsObject(FacesContext context,
                               UIComponent component,
                               String value) {
-        Logger.getLogger(ListConverter.class).info("INICIO GETASOBJECT()");
+        LOG.info("INICIO GETASOBJECT()");
 
         try {
             if (component instanceof javax.faces.component.html.HtmlSelectOneMenu) {
@@ -45,7 +44,7 @@ public class ListConverter implements Converter {
                 }
             }
         } catch (Exception e) {
-            Logger.getLogger(ListConverter.class).error(e.getMessage());
+            LOG.error(e.getMessage());
         }
 
         return value;
@@ -55,14 +54,14 @@ public class ListConverter implements Converter {
     public String getAsString(FacesContext context,
                               UIComponent component,
                               Object value) {
-        Logger.getLogger(ListConverter.class).info("INICIO GETASSTRING()");
+        LOG.info("INICIO GETASSTRING()");
 
         try {
             if (value != null) {
                 return value.toString();
             }
         } catch (Exception e) {
-            Logger.getLogger(ListConverter.class).error(e.getMessage());
+            LOG.error(e.getMessage());
         }
 
         return "";
