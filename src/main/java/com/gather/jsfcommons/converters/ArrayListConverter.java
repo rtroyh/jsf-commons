@@ -29,10 +29,12 @@ public class ArrayListConverter implements Converter {
                               UIComponent component,
                               String value) {
 
-        if (Validator.validateList(options) && keyIndex != null && keyIndex >= 0 && keyIndex < options.size()) {
+        if (Validator.validateList(options) && keyIndex != null && keyIndex >= 0) {
             for (List<Object> list : options) {
-                if (list.get(keyIndex).toString().equals(value)) {
-                    return list;
+                if (keyIndex < list.size()) {
+                    if (list.get(keyIndex).toString().equals(value)) {
+                        return list;
+                    }
                 }
             }
         }
