@@ -6,7 +6,7 @@
 
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.1.12</version>
+    <version>2.1.17</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://maven.apache.org</url>
@@ -57,11 +57,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.0</version>
                 <configuration>
                     <source>1.6</source>
                     <target>1.6</target>
-                    <verbose>true</verbose>
+                    <verbose>false</verbose>
                     <showDeprecation>true</showDeprecation>
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <debug>false</debug>
@@ -71,7 +71,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2</version>
+                <version>2.2.1</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
