@@ -28,6 +28,14 @@ public class ArrayListConverter implements Converter {
     public Object getAsObject(FacesContext context,
                               UIComponent component,
                               String value) {
+        if (context == null || component == null) {
+            throw new NullPointerException();
+        }
+
+        // If the specified value is null or zero-length, return null
+        if (value == null) {
+            return (null);
+        }
 
         if (Validator.validateList(options) && keyIndex != null && keyIndex >= 0) {
             for (List<Object> list : options) {
