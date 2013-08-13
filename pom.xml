@@ -6,7 +6,7 @@
 
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.1.24</version>
+    <version>2.1.25</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://maven.apache.org</url>
@@ -43,11 +43,13 @@
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-servlet-api</artifactId>
             <version>7.0.26</version>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-el-api</artifactId>
             <version>7.0.26</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
