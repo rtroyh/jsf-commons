@@ -104,6 +104,8 @@ public class ColumnSorter {
                     }
                 } else if (isDate(o1) && isDate(o2)) {
                     LOG.debug("DATE: " + valor1 + " - " + valor2);
+
+
                 } else {
                     LOG.debug("STRING: " + valor1 + " - " + valor2);
                     String[] strings = {o1.toString(), o2.toString()};
