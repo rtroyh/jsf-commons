@@ -21,14 +21,12 @@ public class ColumnSorterTest {
 
     @BeforeClass
     public void initData() {
-        ISort numberSort = new NumberSort();
-        ISort stringSort = new StringSort();
-        ISort dateSort = new DateSort();
-
         List<ISort> iSortList = new ArrayList<ISort>();
-        iSortList.add(dateSort);
-        iSortList.add(numberSort);
-        iSortList.add(stringSort);
+        iSortList.add(new NullSort());
+        iSortList.add(new RUTSort());
+        iSortList.add(new DateSort());
+        iSortList.add(new NumberSort());
+        iSortList.add(new StringSort());
 
         columnSorter = new ColumnSorter(iSortList);
     }

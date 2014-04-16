@@ -23,21 +23,11 @@ public class ColumnSorter {
     public int sort(Object o1,
                     Object o2) {
         try {
-            if (o1 != null && o2 != null) {
-                String valor1 = o1.toString();
-                String valor2 = o2.toString();
-
-                if (equals(valor1,
-                           valor2)) {
-                    return 0;
-                }
-
-                for (ISort sorter : sortList) {
-                    if (sorter.check(o1,
-                                     o2)) {
-                        return sorter.sort(o1,
-                                           o2);
-                    }
+            for (ISort sorter : sortList) {
+                if (sorter.check(o1,
+                                 o2)) {
+                    return sorter.sort(o1,
+                                       o2);
                 }
             }
         } catch (NumberFormatException e) {
