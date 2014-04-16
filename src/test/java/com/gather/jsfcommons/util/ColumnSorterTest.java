@@ -1,9 +1,13 @@
 package com.gather.jsfcommons.util;
 
+import com.gather.jsfcommons.util.sort.*;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,15 +21,34 @@ public class ColumnSorterTest {
 
     @BeforeClass
     public void initData() {
-        columnSorter = new ColumnSorter();
+        ISort numberSort = new NumberSort();
+        ISort stringSort = new StringSort();
+        ISort dateSort = new DateSort();
+
+        List<ISort> iSortList = new ArrayList<ISort>();
+        iSortList.add(dateSort);
+        iSortList.add(numberSort);
+        iSortList.add(stringSort);
+
+        columnSorter = new ColumnSorter(iSortList);
+    }
+
+    @DataProvider
+    public Object[][] EsIgualProvider() {
+        return new Object[][]{
+                new Object[]{null, null},
+                new Object[]{"1", "1"},
+                new Object[]{"a", "a"},
+                new Object[]{"01/01/2010", "01/01/2010"}};
     }
 
     @DataProvider
     public Object[][] EsMenorProvider() {
         return new Object[][]{
+                new Object[]{null, "2"},
                 new Object[]{"1", "2"},
                 new Object[]{"aaaaaaa", "bb"},
-                new Object[]{"01/01/2020", "01/02/2010"}};
+                new Object[]{"01/01/2010", "01/02/2010"}};
     }
 
     @DataProvider
@@ -41,7 +64,6 @@ public class ColumnSorterTest {
                                          Object o2) {
         int valid = columnSorter.sort(o1,
                                       o2);
-        System.out.println(valid);
 
         Assert.assertEquals(1,
                             valid);
@@ -52,9 +74,18 @@ public class ColumnSorterTest {
                                          Object o2) {
         int valid = columnSorter.sort(o1,
                                       o2);
-        System.out.println(valid);
 
         Assert.assertEquals(-1,
+                            valid);
+    }
+
+    @Test(dataProvider = "EsIgualProvider")
+    public void ValidEsIgualProviderest(Object o1,
+                                        Object o2) {
+        int valid = columnSorter.sort(o1,
+                                      o2);
+
+        Assert.assertEquals(0,
                             valid);
     }
 }
