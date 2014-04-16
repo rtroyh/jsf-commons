@@ -22,6 +22,8 @@ public class ColumnSorter {
 
     public int sort(Object o1,
                     Object o2) {
+        LOG.debug("DATOS A PROCESAR: " + o1 + "  " + o2);
+
         try {
             for (ISort sorter : sortList) {
                 if (sorter.check(o1,
@@ -31,7 +33,7 @@ public class ColumnSorter {
                 }
             }
         } catch (Exception e) {
-            LOG.error(e.getMessage());
+            LOG.warn(e.getMessage());
         }
 
         return 0;

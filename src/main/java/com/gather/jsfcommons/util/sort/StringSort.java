@@ -41,6 +41,6 @@ public class StringSort implements ISort {
     @Override
     public boolean check(Object o1,
                          Object o2) {
-        return Validator.validateString(o1) && Validator.validateString(o2);
+        return (Validator.validateString(o1) && Validator.validateString(o2)) || (o1.toString().length() == 0 && Validator.validateString(o2)) || (Validator.validateString(o1) && o2.toString().length() == 0) || (o1.toString().length() == 0 && o2.toString().length() == 0);
     }
 }
