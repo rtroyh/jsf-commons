@@ -30,7 +30,7 @@ public class ColumnSorter {
                                        o2);
                 }
             }
-        } catch (NumberFormatException e) {
+        } catch (Exception e) {
             LOG.error(e.getMessage());
         }
 

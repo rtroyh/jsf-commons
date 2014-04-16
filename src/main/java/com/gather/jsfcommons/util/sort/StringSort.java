@@ -19,12 +19,19 @@ public class StringSort implements ISort {
     public int sort(Object o1,
                     Object o2) {
         LOG.debug("STRING: " + o1 + " - " + o2);
-        String[] strings = {o1.toString(), o2.toString()};
+        String s = o1.toString();
+        String s1 = o2.toString();
+
+        if (s.equals(s1)) {
+            return 0;
+        }
+
+        String[] strings = {s, s1};
         Arrays.sort(strings);
 
         LOG.debug("ORDEN: " + strings[0] + "," + strings[1]);
 
-        if (strings[0].equals(o1.toString())) {
+        if (strings[0].equals(s)) {
             return -1;
         } else {
             return 1;

@@ -52,6 +52,7 @@ public class ColumnSorterTest {
     @DataProvider
     public Object[][] EsMayorProvider() {
         return new Object[][]{
+                new Object[]{"2", null},
                 new Object[]{"12", "2"},
                 new Object[]{"zaaaaaaa", "bb"},
                 new Object[]{"05/01/2020", "1/2/2010"}};
