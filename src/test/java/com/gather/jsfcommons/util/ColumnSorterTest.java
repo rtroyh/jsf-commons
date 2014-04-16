@@ -37,6 +37,7 @@ public class ColumnSorterTest {
                 new Object[]{null, null},
                 new Object[]{"1", "1"},
                 new Object[]{"a", "a"},
+                new Object[]{"", ""},
                 new Object[]{"01/01/2010", "01/01/2010"}};
     }
 
@@ -46,6 +47,7 @@ public class ColumnSorterTest {
                 new Object[]{null, "2"},
                 new Object[]{"1", "2"},
                 new Object[]{"aaaaaaa", "bb"},
+                new Object[]{"", "bb"},
                 new Object[]{"01/01/2010", "01/02/2010"}};
     }
 
@@ -54,6 +56,7 @@ public class ColumnSorterTest {
         return new Object[][]{
                 new Object[]{"2", null},
                 new Object[]{"12", "2"},
+                new Object[]{"zaaaaaaa", ""},
                 new Object[]{"zaaaaaaa", "bb"},
                 new Object[]{"05/01/2020", "1/2/2010"}};
     }
