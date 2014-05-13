@@ -54,9 +54,7 @@ public class NumberSort implements ISort {
         valor = valor.replaceAll("\\.",
                                  "");
         valor = valor.replaceAll(",",
-                                 "");
-        valor = valor.replaceAll("-",
-                                 "");
+                                 ".");
 
         return Validator.validateNumber(valor);
     }
