@@ -50,6 +50,10 @@ public class NumberSort implements ISort {
     }
 
     private boolean isNumber(Object o) {
+        if (o == null){
+            return false;
+        }
+
         String valor = o.toString();
         valor = valor.replaceAll("\\.",
                                  "");
