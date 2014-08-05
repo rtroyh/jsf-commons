@@ -6,7 +6,7 @@
 
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.1.28</version>
+    <version>2.1.29</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://maven.apache.org</url>
@@ -66,7 +66,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.2.1</version>
+                <version>2.3</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
