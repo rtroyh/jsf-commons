@@ -59,7 +59,7 @@
                     <verbose>false</verbose>
                     <showDeprecation>true</showDeprecation>
                     <encoding>${project.build.sourceEncoding}</encoding>
-                    <debug>true</debug>
+                    <debug>false</debug>
                     <optimize>true</optimize>
                 </configuration>
             </plugin>
