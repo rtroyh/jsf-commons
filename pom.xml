@@ -6,7 +6,7 @@
 
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.1.29</version>
+    <version>2.1.28</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://maven.apache.org</url>
@@ -14,14 +14,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <repositories>
-        <repository>
-            <id>glassfish-maven-repository.dev.java.net</id>
-            <name>GlassFish Maven Repository</name>
-            <url>http://download.java.net/maven/glassfish</url>
-        </repository>
-    </repositories>
 
     <dependencies>
         <dependency>
