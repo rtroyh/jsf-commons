@@ -40,5 +40,4 @@ public class NumberSortTest {
         Assert.assertEquals(result,
                             valid);
     }
-
 }
