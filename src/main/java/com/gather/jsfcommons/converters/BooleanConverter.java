@@ -49,7 +49,7 @@ public class BooleanConverter implements Converter {
         }
 
         if (value instanceof Boolean) {
-            return ((Boolean)value)?"1":"0";
+            return ((Boolean) value) ? "1" : "0";
         }
 
         return "";

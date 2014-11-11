@@ -1,12 +1,11 @@
 package com.gather.jsfcommons.uicomponents;
 
-import java.io.IOException;
+import com.gather.gathercommons.util.Validator;
 
 import javax.faces.component.html.HtmlOutputText;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-
-import com.gather.gathercommons.util.Validator;
+import java.io.IOException;
 
 public class UIHTMLChart extends HtmlOutputText {
 

@@ -1,11 +1,6 @@
 package com.gather.jsfcommons.filter;
 
-import javax.servlet.Filter;
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
+import javax.servlet.*;
 import java.io.IOException;
 import java.util.Enumeration;
 import java.util.Map;
@@ -19,9 +14,11 @@ import java.util.Map;
  */
 public class ConsolePrintFilter implements Filter {
 
-    public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws
-                                                                                      IOException,
-                                                                                      ServletException {
+    public void doFilter(ServletRequest req,
+                         ServletResponse resp,
+                         FilterChain chain) throws
+                                            IOException,
+                                            ServletException {
         System.out.println("");
         System.out.println("getContentType: " + req.getContentType());
 

@@ -1,12 +1,7 @@
 package com.gather.jsfcommons.component.datatable;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
-
 import javax.faces.event.ActionEvent;
+import java.util.*;
 
 @SuppressWarnings("unchecked")
 public abstract class Row implements List<Object> {

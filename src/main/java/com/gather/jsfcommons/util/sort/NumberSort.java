@@ -50,7 +50,7 @@ public class NumberSort implements ISort {
     }
 
     private boolean isNumber(Object o) {
-        if (o == null){
+        if (o == null) {
             return false;
         }
 

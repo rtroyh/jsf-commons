@@ -1,11 +1,11 @@
 package com.gather.jsfcommons.view.managedbeans;
 
+import javax.faces.context.FacesContext;
+import javax.servlet.ServletException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.SQLException;
 import java.util.Map;
-import javax.faces.context.FacesContext;
-import javax.servlet.ServletException;
 
 public class ErrorBean {
 

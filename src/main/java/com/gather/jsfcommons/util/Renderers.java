@@ -104,9 +104,10 @@ public class Renderers {
                     Collection<SelectItem> values = (Collection<SelectItem>) value;
                     list.addAll(values);
                 } else if (value instanceof Map<?, ?>) {
-                    for (Map.Entry<?, ?> entry : ((Map<?, ?>) value).entrySet())
+                    for (Map.Entry<?, ?> entry : ((Map<?, ?>) value).entrySet()) {
                         list.add(new SelectItem(entry.getKey(),
                                                 "" + entry.getValue()));
+                    }
                 }
             }
         }

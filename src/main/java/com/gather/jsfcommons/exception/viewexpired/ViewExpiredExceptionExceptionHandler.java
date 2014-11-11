@@ -1,7 +1,7 @@
 package com.gather.jsfcommons.exception.viewexpired;
 
-import java.util.Iterator;
-import java.util.Map;
+import org.apache.log4j.Logger;
+
 import javax.faces.FacesException;
 import javax.faces.application.NavigationHandler;
 import javax.faces.application.ViewExpiredException;
@@ -11,8 +11,8 @@ import javax.faces.context.ExceptionHandlerWrapper;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ExceptionQueuedEvent;
 import javax.faces.event.ExceptionQueuedEventContext;
-
-import org.apache.log4j.Logger;
+import java.util.Iterator;
+import java.util.Map;
 
 public class ViewExpiredExceptionExceptionHandler extends ExceptionHandlerWrapper {
 
