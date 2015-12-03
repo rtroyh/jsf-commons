@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.converters;
+package com.gather.jsfcommons.converter;
 
 import com.gather.gathercommons.util.Validator;
 
@@ -24,7 +24,6 @@ public class ArrayListConverter implements Converter {
         this.keyIndex = keyIndex;
     }
 
-    @Override
     public Object getAsObject(FacesContext context,
                               UIComponent component,
                               String value) {
@@ -50,7 +49,6 @@ public class ArrayListConverter implements Converter {
         return null;
     }
 
-    @Override
     public String getAsString(FacesContext context,
                               UIComponent component,
                               Object value) {

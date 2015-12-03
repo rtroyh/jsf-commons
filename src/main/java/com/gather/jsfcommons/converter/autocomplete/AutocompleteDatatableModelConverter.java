@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.autocomplete;
+package com.gather.jsfcommons.converter.autocomplete;
 
 import com.gather.gathercommons.model.IDataTableModel;
 import com.gather.gathercommons.util.Validator;

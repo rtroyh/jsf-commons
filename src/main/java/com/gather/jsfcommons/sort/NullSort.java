@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.util.sort;
+package com.gather.jsfcommons.sort;
 
 import org.apache.log4j.Logger;
 

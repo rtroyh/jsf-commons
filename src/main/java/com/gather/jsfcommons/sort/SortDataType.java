@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.util.sort;
+package com.gather.jsfcommons.sort;
 
 /**
  * Created with IntelliJ IDEA.
@@ -8,5 +8,5 @@ package com.gather.jsfcommons.util.sort;
  * Time: 12:12
  */
 public enum SortDataType {
-    NUMBER, DATE, RUT, STRING;
+    NUMBER, DATE, RUT, STRING
 }

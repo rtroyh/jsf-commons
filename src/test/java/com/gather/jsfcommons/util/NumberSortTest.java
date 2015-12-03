@@ -1,6 +1,6 @@
 package com.gather.jsfcommons.util;
 
-import com.gather.jsfcommons.util.sort.NumberSort;
+import com.gather.jsfcommons.sort.NumberSort;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;

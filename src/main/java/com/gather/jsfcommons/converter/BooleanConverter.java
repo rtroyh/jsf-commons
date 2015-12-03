@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.converters;
+package com.gather.jsfcommons.converter;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -27,11 +27,7 @@ public class BooleanConverter implements Converter {
             return (null);
         }
 
-        if (value.equals("true")) {
-            return true;
-        } else {
-            return false;
-        }
+        return value.equals("true");
     }
 
     @Override

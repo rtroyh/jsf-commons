@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.converters;
+package com.gather.jsfcommons.converter;
 
 import com.gather.gathercommons.model.IDataTableModel;
 import com.gather.gathercommons.util.Validator;
