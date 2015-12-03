@@ -2,13 +2,15 @@ package com.gather.jsfcommons.util;
 
 import javax.el.ExpressionFactory;
 import javax.el.MethodExpression;
+import javax.faces.application.Resource;
+import javax.faces.application.ResourceHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.event.MethodExpressionActionListener;
 import javax.servlet.ServletContext;
+import java.net.URL;
 import java.util.Map;
 
 public final class JSFUtil {
-
     public static String getDirectoryPath(FacesContext fc) {
         ServletContext context = (ServletContext) fc.getExternalContext().getContext();
 
@@ -40,5 +42,14 @@ public final class JSFUtil {
         return new MethodExpressionActionListener(createMethodExpression(valueExpression,
                                                                          expectedReturnType,
                                                                          expectedParamTypes));
+    }
+
+    public static URL getResourceURLPath(FacesContext fc,
+                                         String path) {
+        ResourceHandler rh = fc.getApplication().getResourceHandler();
+        Resource r = rh.createResource(path,
+                                       "gather");
+
+        return r.getURL();
     }
 }
