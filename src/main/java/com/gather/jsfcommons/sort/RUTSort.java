@@ -36,12 +36,16 @@ public class RUTSort implements ISort {
                                    ".");
         valor1 = valor1.replaceAll("-",
                                    "");
+        valor1 = valor1.replaceAll("K",
+                                   "");
 
         valor2 = valor2.replaceAll("\\.",
                                    "");
         valor2 = valor2.replaceAll(",",
                                    ".");
         valor2 = valor2.replaceAll("-",
+                                   "");
+        valor2 = valor2.replaceAll("K",
                                    "");
 
         Double d1 = Double.valueOf(valor1);
@@ -51,9 +55,9 @@ public class RUTSort implements ISort {
             return -1;
         } else if (d1.equals(d2)) {
             return 0;
-        } else {
-            return 1;
         }
+
+        return 1;
     }
 
     @Override
@@ -64,7 +68,7 @@ public class RUTSort implements ISort {
 
     private boolean isRUT(Object o) {
         String valor = o.toString();
-        boolean haveOneSlash = StringUtils.countMatches(valor,
+        boolean haveOneSlash =                                  StringUtils.countMatches(valor,
                                                         "-") == 1;
 
         if (haveOneSlash) {

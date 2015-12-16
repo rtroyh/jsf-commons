@@ -9,8 +9,8 @@ package com.gather.jsfcommons.sort;
  */
 public interface ISort {
     int sort(Object o1,
-             Object o2);
-
+             Object o2) throws
+                        Exception;
 
     boolean check(Object o1,
                   Object o2);

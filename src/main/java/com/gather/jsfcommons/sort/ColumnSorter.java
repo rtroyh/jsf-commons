@@ -38,9 +38,4 @@ public class ColumnSorter {
 
         return 0;
     }
-
-    private boolean equals(Object valor1,
-                           Object valor2) {
-        return valor1.equals(valor2);
-    }
 }

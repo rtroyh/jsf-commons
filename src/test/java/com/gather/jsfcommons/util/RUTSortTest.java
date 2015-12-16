@@ -39,7 +39,7 @@ public class RUTSortTest {
     @DataProvider
     public Object[][] EsMayorProvider() {
         return new Object[][]{
-                new Object[]{"15330294-0", "13665383-0"},
+                new Object[]{"15330294-0", "13665383-K"},
                 new Object[]{"15330294-0", null}};
     }
 
