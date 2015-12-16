@@ -82,8 +82,8 @@ public class ColumnSorterTest {
     }
 
     @Test(dataProvider = "EsIgualProvider")
-    public void ValidEsIgualProviderest(Object o1,
-                                        Object o2) {
+    public void ValidEsIgualProviderTest(Object o1,
+                                         Object o2) {
         int valid = columnSorter.sort(o1,
                                       o2);
 
