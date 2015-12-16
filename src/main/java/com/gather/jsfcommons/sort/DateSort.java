@@ -59,6 +59,14 @@ public class DateSort implements ISort {
                     Object o2) {
         LOG.debug("DATE: " + o1 + " - " + o2);
 
+        if (o1 == null && o2 != null) {
+            return -1;
+        } else if (o1 == null) {
+            return 0;
+        } else if (o2 == null) {
+            return 1;
+        }
+
         Date date1 = this.getObjectAsDate(o1);
         Date date2 = this.getObjectAsDate(o2);
 
