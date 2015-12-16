@@ -19,6 +19,14 @@ public class RUTSort implements ISort {
                     Object o2) {
         LOG.debug("RUT: " + o1 + " - " + o2);
 
+        if (o1 == null && o2 != null) {
+            return -1;
+        } else if (o1 == null) {
+            return 0;
+        } else if (o2 == null) {
+            return 1;
+        }
+
         String valor1 = o1.toString();
         String valor2 = o2.toString();
 
