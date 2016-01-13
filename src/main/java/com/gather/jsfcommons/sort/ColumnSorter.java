@@ -16,6 +16,9 @@ public class ColumnSorter {
 
     private List<ISort> sortList;
 
+    public ColumnSorter() {
+    }
+
     public ColumnSorter(List<ISort> sortList) {
         this.sortList = sortList;
     }
