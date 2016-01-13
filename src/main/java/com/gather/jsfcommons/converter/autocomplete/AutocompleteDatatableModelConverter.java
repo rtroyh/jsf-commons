@@ -1,6 +1,6 @@
 package com.gather.jsfcommons.converter.autocomplete;
 
-import com.gather.gathercommons.model.IDataTableModel;
+import com.gather.gathercommons.model.IListModel;
 import com.gather.gathercommons.util.Validator;
 
 import javax.faces.component.UIComponent;
@@ -12,16 +12,16 @@ import java.util.List;
  * Created by rodrigotroy on 10/23/14.
  */
 public class AutocompleteDatatableModelConverter implements Converter {
-    private IDataTableModel model;
+    private IListModel model;
     private Integer index;
 
-    public AutocompleteDatatableModelConverter(IDataTableModel model,
+    public AutocompleteDatatableModelConverter(IListModel model,
                                                Integer index) {
         this.model = model;
         this.index = index;
     }
 
-    public AutocompleteDatatableModelConverter(IDataTableModel model) {
+    public AutocompleteDatatableModelConverter(IListModel model) {
         this.model = model;
         this.index = 1;
     }
