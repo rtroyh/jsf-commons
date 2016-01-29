@@ -2,6 +2,7 @@ package com.gather.jsfcommons.sort;
 
 import org.apache.log4j.Logger;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -20,6 +21,18 @@ public class ColumnSorter {
     }
 
     public ColumnSorter(List<ISort> sortList) {
+        this.sortList = sortList;
+    }
+
+    public List<ISort> getSortList() {
+        if (sortList == null) {
+            sortList = new ArrayList();
+        }
+
+        return sortList;
+    }
+
+    public void setSortList(List<ISort> sortList) {
         this.sortList = sortList;
     }
 
