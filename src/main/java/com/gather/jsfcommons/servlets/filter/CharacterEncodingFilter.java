@@ -1,4 +1,4 @@
-package com.gather.jsfcommons.filter;
+package com.gather.jsfcommons.servlets.filter;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -25,6 +25,4 @@ public class CharacterEncodingFilter implements Filter {
     public void destroy() {
 
     }
-
-
 }

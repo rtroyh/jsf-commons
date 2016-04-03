@@ -34,11 +34,11 @@ public class ColumnSorterTest {
     @DataProvider
     public Object[][] EsIgualProvider() {
         return new Object[][]{
-                new Object[]{null, null},
-                new Object[]{"1", "1"},
-                new Object[]{"a", "a"},
-                new Object[]{"", ""},
-                new Object[]{"01/01/2010", "01/01/2010"}};
+                {null, null},
+                {"1", "1"},
+                {"a", "a"},
+                {"", ""},
+                {"01/01/2010", "01/01/2010"}};
     }
 
     @DataProvider
