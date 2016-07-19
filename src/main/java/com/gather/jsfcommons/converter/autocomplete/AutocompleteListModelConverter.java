@@ -11,17 +11,17 @@ import java.util.List;
 /**
  * Created by rodrigotroy on 10/23/14.
  */
-public class AutocompleteDatatableModelConverter implements Converter {
+public class AutocompleteListModelConverter implements Converter {
     private IListModel model;
     private Integer index;
 
-    public AutocompleteDatatableModelConverter(IListModel model,
-                                               Integer index) {
+    public AutocompleteListModelConverter(IListModel model,
+                                          Integer index) {
         this.model = model;
         this.index = index;
     }
 
-    public AutocompleteDatatableModelConverter(IListModel model) {
+    public AutocompleteListModelConverter(IListModel model) {
         this.model = model;
         this.index = 1;
     }
