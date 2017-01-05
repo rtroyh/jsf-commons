@@ -3,6 +3,7 @@ package com.gather.jsfcommons.converter;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
+import javax.faces.convert.FacesConverter;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,8 @@ import javax.faces.convert.Converter;
  * Time: 4:15 PM
  * To change this template use File | Settings | File Templates.
  */
+
+@FacesConverter("com.mkyong.URLConverter")
 public class BooleanConverter implements Converter {
 
     @Override
