@@ -13,14 +13,13 @@ import javax.faces.convert.FacesConverter;
  * To change this template use File | Settings | File Templates.
  */
 
-@FacesConverter("com.mkyong.URLConverter")
+@FacesConverter("com.gather.BooleanConverter")
 public class BooleanConverter implements Converter {
 
     @Override
     public Object getAsObject(FacesContext context,
                               UIComponent component,
                               String value) {
-        System.out.println("getAsObject = " + value);
         if (context == null || component == null) {
             throw new NullPointerException();
         }
@@ -37,7 +36,6 @@ public class BooleanConverter implements Converter {
     public String getAsString(FacesContext context,
                               UIComponent component,
                               Object value) {
-        System.out.println("getAsString = " + value);
         if (context == null || component == null) {
             throw new NullPointerException();
         }
