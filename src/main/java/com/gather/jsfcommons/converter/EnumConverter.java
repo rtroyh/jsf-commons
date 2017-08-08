@@ -1,6 +1,7 @@
 package com.gather.jsfcommons.converter;
 
 import com.gather.gathercommons.model.IEnum;
+import com.gather.gathercommons.util.Validator;
 
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -50,13 +51,27 @@ public class EnumConverter implements Converter {
     public Object getAsObject(FacesContext context,
                               UIComponent component,
                               String submittedValue) {
-
-        Class<Enum> enumType = this.getViewAttribute(ATTRIBUTE_ENUM_TYPE + component.getClientId(context),
-                                                     context);
+        if (!Validator.validateString(submittedValue)) {
+            throw new ConverterException("submittedValue is empty or null");
+        }
 
         try {
-            return Enum.valueOf(enumType,
-                                submittedValue.toUpperCase());
+            Class<Enum> enumType = this.getViewAttribute(ATTRIBUTE_ENUM_TYPE + component.getClientId(context),
+                                                         context);
+
+            final Enum[] enumConstants = enumType.getEnumConstants();
+
+            for (Enum enumConstant : enumConstants) {
+                if (enumConstant instanceof IEnum) {
+                    IEnum theEnum = (IEnum) enumConstant;
+
+                    if (theEnum.getLabel().equals(submittedValue)) {
+                        return theEnum;
+                    }
+                }
+            }
+
+            throw new ConverterException("Error");
         } catch (IllegalArgumentException e) {
             throw new ConverterException("Error",
                                          e);
