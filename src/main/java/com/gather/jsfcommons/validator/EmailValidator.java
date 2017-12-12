@@ -3,6 +3,7 @@ package com.gather.jsfcommons.validator;
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
+import javax.faces.validator.FacesValidator;
 import javax.faces.validator.Validator;
 import javax.faces.validator.ValidatorException;
 
@@ -13,6 +14,7 @@ import javax.faces.validator.ValidatorException;
  * Date: 16-11-15
  * Time: 13:21
  */
+@FacesValidator("emailValidator")
 public class EmailValidator implements Validator {
     public void validate(FacesContext fc,
                          UIComponent c,
