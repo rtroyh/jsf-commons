@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.0</version>
+    <version>2.0.1</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://www.gather.cl</url>

@@ -17,7 +17,7 @@ import java.util.Map;
  * Date: 8/8/17
  * Time: 12:01
  */
-@FacesConverter(value = "gather.EnumConverter")
+@FacesConverter(value = "com.gather.EnumConverter")
 public class EnumConverter implements Converter {
     private static final String ATTRIBUTE_ENUM_TYPE = "EnumConverter.";
     private static final String ERROR_NO_ENUM_TYPE = "Given type is not an enum.";
