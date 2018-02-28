@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.0.1</version>
+    <version>2.1.0</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://www.gather.cl</url>
@@ -42,13 +42,13 @@
         <dependency>
             <groupId>com.sun.faces</groupId>
             <artifactId>jsf-impl</artifactId>
-            <version>2.2.15</version>
+            <version>2.2.16</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <artifactId>jsf-api</artifactId>
             <groupId>com.sun.faces</groupId>
-            <version>2.2.15</version>
+            <version>2.2.16</version>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -59,13 +59,13 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>gathercommons</artifactId>
-            <version>1.8.0</version>
+            <version>1.11.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.13.1</version>
+            <version>6.14.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
@@ -83,7 +83,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.5.1</version>
+                <version>3.6.2</version>
                 <configuration>
                     <verbose>false</verbose>
                     <showWarnings>true</showWarnings>
