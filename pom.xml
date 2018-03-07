@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>2.1.0</version>
+    <version>3.0</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://www.gather.cl</url>
@@ -40,21 +40,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.sun.faces</groupId>
-            <artifactId>jsf-impl</artifactId>
-            <version>2.2.16</version>
-            <scope>runtime</scope>
-        </dependency>
-        <dependency>
-            <artifactId>jsf-api</artifactId>
-            <groupId>com.sun.faces</groupId>
-            <version>2.2.16</version>
-        </dependency>
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.faces</artifactId>
+            <version>2.3.3</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
