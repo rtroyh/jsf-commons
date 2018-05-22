@@ -14,7 +14,7 @@ import javax.faces.validator.ValidatorException;
  * Date: 16-11-15
  * Time: 13:21
  */
-@FacesValidator("emailValidator")
+@FacesValidator("com.gather.emailValidator")
 public class EmailValidator implements Validator {
     public void validate(FacesContext fc,
                          UIComponent c,

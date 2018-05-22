@@ -16,7 +16,7 @@ import javax.faces.validator.ValidatorException;
  * Date: 12/12/17
  * Time: 13:48
  */
-@FacesValidator("rutValidator")
+@FacesValidator("com.gather.rutValidator")
 public class RUTValidator implements Validator {
     @Override
     public void validate(FacesContext facesContext,
