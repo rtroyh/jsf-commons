@@ -12,9 +12,8 @@ import javax.faces.convert.FacesConverter;
  * Time: 4:15 PM
  * To change this template use File | Settings | File Templates.
  */
-
-@FacesConverter("com.gather.BooleanConverter")
-public class BooleanConverter implements Converter {
+@FacesConverter("com.gather.BooleanNumberConverter")
+public class BooleanNumberConverter implements Converter {
 
     @Override
     public Object getAsObject(FacesContext context,
@@ -26,7 +25,15 @@ public class BooleanConverter implements Converter {
 
         // If the specified value is null or zero-length, return null
         if (value == null) {
-            return (null);
+            return false;
+        }
+
+        if (value.equals("1")) {
+            return true;
+        }
+
+        if (value.equals("0")) {
+            return false;
         }
 
         return value.equals("true");

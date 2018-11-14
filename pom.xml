@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.gather</groupId>
     <artifactId>jsfcommons</artifactId>
-    <version>3.0</version>
+    <version>3.1</version>
     <packaging>jar</packaging>
     <name>jsfcommons</name>
     <url>http://www.gather.cl</url>
@@ -47,7 +47,7 @@
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>gathercommons</artifactId>
-            <version>1.11.1</version>
+            <version>1.17.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -71,7 +71,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.6.2</version>
+                <version>3.7.0</version>
                 <configuration>
                     <verbose>false</verbose>
                     <showWarnings>true</showWarnings>
